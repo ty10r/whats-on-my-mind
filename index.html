@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tylor — AI for Behavioral Health Service Delivery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,500..900&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #16212e;
+    --ink-soft: #45525f;
+    --paper: #f5f6f3;
+    --line: #d8dad3;
+    --chip-shipped: #2e6b4f;
+    --chip-active: #8a5a16;
+    --spectrum: linear-gradient(90deg, #c4452f, #d97f2b, #c9a227, #4e8a4e, #2f6f8f, #5b4a8a);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 19px;
+    line-height: 1.62;
+  }
+  .page { max-width: 700px; margin: 0 auto; padding: 72px 24px 96px; }
+  .mono { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; }
+  header .mono { color: var(--ink-soft); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; border-bottom: 1px solid var(--line); padding-bottom: 14px; }
+  h1 {
+    font-family: 'Archivo', sans-serif;
+    font-variation-settings: 'wdth' 125;
+    font-weight: 860;
+    font-size: clamp(34px, 6vw, 52px);
+    line-height: 1.04;
+    letter-spacing: -0.015em;
+    margin: 56px 0 22px;
+  }
+  .spectrum-rule { height: 5px; width: 120px; background: var(--spectrum); border-radius: 2px; margin-bottom: 28px; }
+  .lede { font-size: 22px; font-weight: 500; line-height: 1.5; color: var(--ink); }
+  section { margin-top: 64px; }
+  .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; }
+  h2 {
+    font-family: 'Archivo', sans-serif;
+    font-variation-settings: 'wdth' 125;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+  p + p { margin-top: 14px; }
+  .quiet { color: var(--ink-soft); }
+  .exploration { border-top: 1px solid var(--line); padding: 28px 0 8px; margin-top: 28px; }
+  .exploration:first-of-type { margin-top: 8px; }
+  .exp-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 6px; }
+  .exp-num { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink-soft); }
+  .exploration h3 {
+    font-family: 'Archivo', sans-serif;
+    font-variation-settings: 'wdth' 125;
+    font-weight: 800;
+    font-size: 21px;
+  }
+  .chip {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
+    padding: 3px 9px; border-radius: 3px; text-transform: uppercase;
+    border: 1px solid currentColor;
+  }
+  .chip.shipped { color: var(--chip-shipped); }
+  .chip.active { color: var(--chip-active); }
+  .exp-question { font-style: italic; color: var(--ink-soft); margin-bottom: 12px; font-size: 18px; }
+  .exp-mark { height: 3px; width: 44px; background: var(--spectrum); border-radius: 2px; margin: 18px 0 0; }
+  .links { margin-top: 10px; }
+  a { color: #2f6f8f; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  footer { margin-top: 80px; border-top: 1px solid var(--line); padding-top: 24px; }
+  footer .mono { color: var(--ink-soft); line-height: 2; }
+  @media (max-width: 480px) { body { font-size: 17.5px; } .page { padding-top: 48px; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="mono">
+      <span>Tylor [LAST NAME]</span>
+      <span>Memo for 1517 Fund · June 2026</span>
+    </div>
+  </header>
+
+  <h1>AI-native service delivery for behavioral health and addiction treatment.</h1>
+  <div class="spectrum-rule"></div>
+  <p class="lede">Behavioral health runs on photocopied handouts, dead-link directories, and intake processes that lose people in crisis to hold music. I'm proving that one builder, working with AI agents, can ship the tools and infrastructure this field never got.</p>
+
+  <section>
+    <div class="eyebrow">The problem</div>
+    <h2>The field that helps people change has barely changed.</h2>
+    <p>The tools used every day in treatment settings — emotion charts, worksheets, meeting lists, facility directories — are decades old, badly designed, or both. The people who depend on them are often at the most vulnerable moment of their lives. And the gap between "family decides to seek treatment" and "person walks through a door" is where countless people are lost: eligibility, appropriateness, insurance, and orientation are all sorted out <em>after</em> first contact, slowly, by phone.</p>
+    <p>This isn't a market that lacks demand. It lacks builders. Software talent doesn't go here, so the field has been left with whatever clipart and PDFs it could make for itself.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">The thesis</div>
+    <h2>AI collapses the cost of building for this field to one person.</h2>
+    <p>Clinical tooling, comprehensive directories, and intake infrastructure used to require teams, funding, and years. With AI-powered research, design, and engineering pipelines, I can ship them solo, in weeks. I've been running three explorations to prove different parts of this thesis — one shipped, two nearly complete.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Evidence</div>
+    <h2>Three explorations.</h2>
+
+    <div class="exploration">
+      <div class="exp-head">
+        <span class="exp-num">01</span>
+        <h3>Facing Feelings™</h3>
+        <span class="chip shipped">Shipped</span>
+      </div>
+      <p class="exp-question">Can AI build clinical-quality tools for behavioral health settings?</p>
+      <p>
+        A ground-up replacement for the feelings wheel: a 27-face illustrated emotion identification chart for behavioral 
+        health and addiction treatment settings, built through AI-powered research and a fully deterministic design pipeline. 
+        Shipped as a product line — wall poster, session handout, brand identity — and selling on Gumroad and Etsy today.
+      </p>
+      <p>
+        This project is being used to teach drug and alcohol counselors and therapists I have worked with how
+        AI could be leveraged to create tools they would like to use. In the pipeline is a full 30 day group
+        activity curriculum, optimized for cognitive load and expected patient mental capacity each day.
+      </p>
+      <p class="links quiet">→ <a href="https://facingfeelings.gumroad.com/l/chart">Live product listing</a></p>
+      <div class="exp-mark"></div>
+    </div>
+
+    <div class="exploration">
+      <div class="exp-head">
+        <span class="exp-num">02</span>
+        <h3>US 12-Step Meeting Registry</h3>
+        <span class="chip active">In final audit</span>
+      </div>
+      <p class="exp-question">Can user experience come first for people looking for community?</p>
+      <p>A comprehensive registry of AA and NA meetings across the United States. Existing meeting finders are fragmented and painful to use at exactly the moment someone needs them not to be. This one aggregates the major open data feeds (BMLT, TSML) through a deterministic pipeline into fast, geo-sharded static data — with a stratified audit kit that measures real coverage instead of claiming it.</p>
+      <div class="exp-mark"></div>
+    </div>
+
+    <div class="exploration">
+      <div class="exp-head">
+        <span class="exp-num">03</span>
+        <h3>California Treatment Facility Registry</h3>
+        <span class="chip active">Built</span>
+      </div>
+      <p class="exp-question">Can intake be frontloaded so people in crisis reach treatment faster?</p>
+      <p>A registry of every rehab facility in California — the foundation for moving screening, eligibility, appropriateness, insurance verification, and orientation to the <em>front</em> of the process. The goal: when an individual or family decides to seek help, the path to the right door is hours, not weeks.</p>
+      <div class="exp-mark"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow">Where this converges</div>
+    <h2>An AI-native front door to treatment.</h2>
+    <p>The registries are the map. The intake thesis is the routing layer. The tooling proves the build capability. Together they point at one product: a system where someone in crisis — or their family — gets matched, verified, and oriented to appropriate care immediately, and connected to ongoing 12-step community after. Nobody has built this because it requires both deep domain knowledge and modern engineering. That intersection is where I live.</p>
+  </section>
+
+  <section>
+    <div class="eyebrow">Why me</div>
+    <h2>I'm from this world, and I ship.</h2>
+    <p>√I have years of experience with substance use disorder — most of them from the wrong side of the desk. It took me ten
+      years to reach treatment, which means I spent a decade exactly where the dead links, hold music, and bad handouts are.
+      I've been sober for one year. In that year: hands-on work in the field, a CADC-I counselor certification in progress,
+      and everything on this page.
+    </p>
+    <p>
+      Before all of that, a software engineering background. Today I build solo, running my own agent orchestration stack —
+      AI-powered research, design, and engineering across every project above — in the margins of a full-time operations job.
+    </p>
+    <p>I don't have a pedigree. I have shipped products, working data pipelines, and a field that desperately needs someone who understands it from the inside.</p>
+  </section>
+
+  <footer>
+    <div class="mono">
+      Tylor Louis · Yuba City / Grass Valley, CA<br>
+      tylorjnlouis@gmail.com<br>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
